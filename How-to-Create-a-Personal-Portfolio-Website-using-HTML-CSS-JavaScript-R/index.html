@@ -1,0 +1,306 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b0cd25bb74.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Responsive Portfolio</title>
+</head>
+<body>
+    <header>
+        <menu>
+            <div class="container grid">
+                <a href="#" id="logo" class="left logo"><img src="images/logoHeader.svg" alt="logo"></a>
+                <label for="toggle">&#9776;</label>
+                <input type="checkbox" id="toggle"/>
+                <nav class="right">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </menu>
+        <div class="clr"></div>
+        <div id="hero">
+            <div class="container grid">
+                <div class="left" data-aos="fade-right">
+                    <H1>MY HANDS CODES, BUT MY MIND DESIGNS.</H1>
+                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit consectetur adipisicing elit.</P>
+                    <button>Work With Me</button>
+                </div>
+                <div class="right" data-aos="fade-left" data-aos-delay="500">
+                    <img src="images/Reddi.png" alt="Reddi Flryd">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="clr"></div>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="container grid">
+            <div class="left">
+                <h1>About Me</h1>
+            </div>
+            <div class="right">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam vel alias id quo corrupti. Ea, sunt rem! Culpa fugit ratione aspernatur animi magnam voluptatem vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae placeat soluta, repellat error laborum sunt?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae placeat soluta, repellat error laborum sunt?</p>
+
+                <button class="btnLeft">View Works</button>
+                <button class="btnRight">Download CV</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="textCaption">
+                <h2>Services</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti rerum nihil, accusamus a sunt dignissimos nam maxime suscipit, deserunt eveniet at. Odio consequatur voluptates ipsa.</p>
+            </div>
+            <div class="boxes grid">
+                <div class="box box1" data-aos="fade-right">
+                    <img src="images/app.png" alt="services">
+                    <h3>App Development</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error inventore quo ipsam nesciunt placeat expedita!</p>
+                </div>
+                <div class="box box2" data-aos="fade-left" data-aos-delay="400">
+                    <img src="images/webdev.png" alt="services">
+                    <h3>Web Development</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error inventore quo ipsam nesciunt placeat expedita!</p>
+                </div>
+                <div class="box box3" data-aos="fade-right">
+                    <img src="images/webdesign.png" alt="services">
+                    <h3>Web Design</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error inventore quo ipsam nesciunt placeat expedita!</p>
+                </div>
+                <div class="box box4" data-aos="fade-left" data-aos-delay="400">
+                    <img src="images/seo.png" alt="services">
+                    <h3>SEO</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error inventore quo ipsam nesciunt placeat expedita!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="textCaption">
+                <h2>Finished Projects</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti rerum nihil, accusamus a sunt dignissimos nam maxime suscipit, deserunt eveniet at. Odio consequatur voluptates ipsa.</p>
+            </div>
+    
+            <div id="btnWrapper">
+                <button class="btn active" onclick="filterSelection('all')">All</button>
+                <button class="btn" onclick="filterSelection('webdesign')">Web Design</button>
+                <button class="btn" onclick="filterSelection('webdev')">Web Development</button>
+                <button class="btn" onclick="filterSelection('app')">App Development</button>
+                <button class="btn" onclick="filterSelection('seo')">SEO</button>
+            </div>
+
+            <!-- Portfolio Gallery Grid -->
+            <div class="boxes grid">
+                <div class="project project1 webdesign">
+                    <img src="images/project1.jpg" alt="Mountains">
+                      <div class="overlay">
+                        <div class="text">
+                            <img src="images/zoom.png" alt="zoom" class="zoom" onclick="openModal();currentSlide(1)">
+                            Hello World
+                        </div>
+                    </div>
+                </div>
+                <div class="project project2 webdesign">
+                    <img src="images/project2.jpg" alt="Lights">
+                      <div class="overlay">
+                        <div class="text">
+                            <img src="images/zoom.png" alt="zoom" class="zoom" onclick="openModal();currentSlide(2)">
+                            Hello World
+                        </div>
+                    </div>
+                </div>
+                <div class="project project3 webdesign">
+                        <img src="images/project3.jpg" alt="Nature">
+                        <div class="overlay">
+                        <div class="text">
+                            <img src="images/zoom.png" alt="zoom" class="zoom" onclick="openModal();currentSlide(3)">
+                            Hello World
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project project4 webdev">
+                    <img src="images/project4.jpg" alt="Car">
+                      <div class="overlay">
+                        <div class="text">
+                            <img src="images/zoom.png" alt="zoom" class="zoom" onclick="openModal();currentSlide(4)">
+                            Hello World
+                        </div>
+                    </div>
+                </div>
+                <div class="project project5 webdev">
+                    <img src="images/project5.jpg" alt="Car">
+                      <div class="overlay">
+                        <div class="text">
+                            <img src="images/zoom.png" alt="zoom" class="zoom" onclick="openModal();currentSlide(5)">
+                            Hello World
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project project6 app">
+                    <img src="images/project6.jpg" alt="Car">
+                        <div class="overlay">
+                        <div class="text">
+                            <img src="images/zoom.png" alt="zoom" class="zoom" onclick="openModal();currentSlide(6)">
+                            Hello World
+                        </div>
+                    </div>
+                </div>
+                <div class="project project7 app">
+                    <img src="images/project7.jpg" alt="Car">
+                      <div class="overlay">
+                        <div class="text">
+                            <img src="images/zoom.png" alt="zoom" class="zoom" onclick="openModal();currentSlide(7)">
+                            Hello World
+                        </div>
+                    </div>
+                </div>
+                <div class="project project8 seo">
+                    <img src="images/project8.jpg" alt="Car">
+                      <div class="overlay">
+                        <div class="text">
+                            <img src="images/zoom.png" alt="zoom" class="zoom" onclick="openModal();currentSlide(8)">
+                            Hello World
+                        </div>
+                    </div>
+                </div>
+            <!-- END GRID -->
+            </div>
+
+            <div class="row">
+                <div id="myModal" class="modal">
+                  <span class="close cursor" onclick="closeModal()">&times;</span>
+                  <div class="modal-content">
+                
+                    <div class="mySlides">
+                      <img src="images/modal1.jpg">
+                    </div>
+                    <div class="mySlides">
+                      <img src="images/modal2.jpg">
+                    </div>
+                    <div class="mySlides">
+                      <img src="images/modal3.jpg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="images/modal4.jpg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="images/modal5.jpg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="images/modal6.jpg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="images/modal7.jpg">
+                    </div>
+                    <div class="mySlides">
+                        <img src="images/modal8.jpg">
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+                    <div class="caption-container">
+                      <p id="caption"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKWITHME -->
+    <section class="workWithMe" id="contact">
+        <div class="container grid">
+            <div class="left">
+                <h3>Work With Me</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae placeat soluta, repellat error laborum sunt?</p>
+            </div>
+            <div class="right">
+                <button>Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact">
+        <div class="container grid">
+            <div class="left">
+                <div class="address">
+                    <h3>Address</h3>
+                    <p><small>Lorem ipsum dolor sit amet adipisicing <br> elit. Harum, officiis.</small></p>
+                </div>
+                <div class="emailPhone">
+                    <h3>Contact</h3>
+                    <p><small>info@name.com</small></p>
+                    <p><small>+1(39)0780-948</small></p>
+                </div>
+                <div class="socialIcons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+
+            <div class="right">
+                <form>
+                    <input type="text" id="name" placeholder="Full Name">
+                    <input type="email" id="email" placeholder="Email Address">
+                    <input type="text" id="companyName" placeholder="Company Name">
+                    <textarea name="message"  cols="30" rows="10" placeholder="More information will be helpful"></textarea>
+                    <button class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container grid">
+            <div class="left">
+                <a href="#" class="logo"><img src="images/logoFooter.svg" alt="logo"></a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, optio.</p>
+            </div>
+            <div class="right">
+                <span class="socialIcons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </span>
+                <small>Copyright &copy; 2020 ReddiFlryd</small>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+    <!-- Page Animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 50,
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+</html>
